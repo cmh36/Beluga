@@ -13,10 +13,9 @@ InputParameters validParams<BelugaApp>()
   return params;
 }
 
-BelugaApp::BelugaApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+BelugaApp::BelugaApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
