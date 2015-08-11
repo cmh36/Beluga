@@ -11,7 +11,7 @@ InputParameters validParams<BelugaApp>();
 class BelugaApp : public MooseApp
 {
 public:
-  BelugaApp(const std::string & name, InputParameters parameters);
+  BelugaApp(InputParameters parameters);
   virtual ~BelugaApp();
 
   static void registerApps();
